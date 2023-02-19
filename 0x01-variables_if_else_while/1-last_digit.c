@@ -5,8 +5,12 @@
 
 /* betty style doc for function main goes there */
 /**
-* Description: Positive anything is better than negative nothing
-* Return: 0
+ * main - Entry point for the program
+ *
+ * This program generates a random number and prints its last digit along with
+ * a message indicating whether the digit is greater than 5, less than 6 and not
+ * 0, or 0.
+ * Return: Always 0
 */
 
 int main(void)
