@@ -8,7 +8,8 @@
  * main - Entry point for the program
  *
  * This program generates a random number and prints its last digit along with
- * a message indicating whether the digit is greater than 5, less than 6 and not
+ * a message indicating whether the digit is greater than 5,
+ *less than 6 and not
  * 0, or 0.
  * Return: Always 0
 */
