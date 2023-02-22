@@ -5,25 +5,26 @@
  * Return: Always 0
  */
 
-#include <stdio.h>
 
 int main(void)
 {
-unsigned int n1 = 1, n2 = 2, next, i;
+unsigned long long n1 = 0, n2 = 1, next, i, n = 100;
+printf("Fibonacci series:\n");
 
-printf("%u, %u", n1, n2);
-
-for (i = 3; i <= 98; i++)
-
+for (i = 0; i < n; i++)
 {
+if (i <= 1)
+{
+next = i;
 
+}
+else
+{
 next = n1 + n2;
-printf(", %u", next);
 n1 = n2;
 n2 = next;
 }
-printf("\n");
-
+printf("%llu, ", next);
+}
 return (0);
 }
-
