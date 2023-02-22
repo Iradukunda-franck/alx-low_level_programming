@@ -8,23 +8,21 @@
 
 int main(void)
 {
-unsigned long long n1 = 0, n2 = 1, next, i, n = 100;
-printf("Fibonacci series:\n");
+unsigned long n1 = 0, n2 = 1, next, i, n = 100;
 
 for (i = 0; i < n; i++)
 {
 if (i <= 1)
-{
 next = i;
-
-}
 else
 {
 next = n1 + n2;
 n1 = n2;
 n2 = next;
 }
-printf("%llu, ", next);
+printf("%lu, ", next);
 }
+
 return (0);
 }
+
