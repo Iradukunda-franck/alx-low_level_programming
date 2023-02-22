@@ -6,16 +6,19 @@
  */
 int main(void)
 {
-unsigned long long int n1 = 1, n2 = 2, next, i;
+unsigned int n1 = 1, n2 = 2, next, i;
 
-printf("%llu, %llu", n1, n2);
+printf("%u, %u", n1, n2);
+
 for (i = 3; i <= 98; i++)
 {
-next = n1 + n2;
-printf(", %llu", next);
+ext = n1 + n2;
+printf(", %u", next);
 n1 = n2;
 n2 = next;
 }
+
 printf("\n");
+
 return (0);
 }
