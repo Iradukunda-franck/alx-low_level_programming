@@ -1,33 +1,29 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
- * _atoi - convert a string to an integer
+ * main - generates a random valid password for 101-crackme
  *
- * @s: string to convert
- *
- * Return: the converted integer
+ * Return: 0 on success
  */
-int _atoi(char *s)
+int main(void)
 {
-int sign = 1;
-int result = 0;
+int i, sum, diff;
+char password[84];
 
-while (*s != '\0')
+srand(time(0));
+
+for (i = 0, sum = 0; sum < (2772 - 122); i++)
 {
-if (*s == '-')
-{
-sign *= -1;
-}
-else if (*s >= '0' && *s <= '9')
-{
-result = result * 10 + (*s - '0') * sign;
-if (*(s + 1) < '0' || *(s + 1) > '9')
-{
-break;
-}
-}
-s++;
+password[i] = (rand() % 94) + 33;
+sum += password[i];
 }
 
-return (result);
+password[i] = '\0';
+diff = 2772 - sum;
+password[i - 1] += diff;
+
+printf("%s", password);
+return (0);
 }
