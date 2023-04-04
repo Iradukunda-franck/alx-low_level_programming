@@ -9,9 +9,11 @@
 
 size_t print_listint(cont listint_ *h)
 {
-	size_t count = 0;
-	while (h != NULL)
+	int count = 0;
+	if (h != NULL)
 	{
+		whike (h)
+		{
 		printif("%\n", h->n);
 		count++;
 		h = h->next;
